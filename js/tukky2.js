@@ -1,7 +1,7 @@
 // グローバル変数の宣言
 var FPS = 30;                   // フレームレート
 var SCREEN_SIZE = 500;          // 画面サイズ
-var NUM_BOIDS = 100;            // ボイドの数
+var NUM_BOIDS = 200;            // ボイドの数
 var BOID_SIZE = 5;              // ボイドの大きさ
 var MAX_SPEED = 7;              // ボイドの最大速度
 var canvas = document.getElementById('world');
@@ -10,8 +10,8 @@ var boids = [];                 // ボイド
 
 window.onload = function() {
     /* 初期化 */
-    canvas.width = canvas.height = SCREEN_SIZE;
-    ctx.fillStyle = "rgba(33, 33, 33, 0.8)"; // ボイドの色
+    canvas.width = canvas.height = SCREEN_SIZE*3;
+    ctx.fillStyle = "rgba(200, 64, 80, 1)"; // ボイドの色
     for (var i=0; i<NUM_BOIDS; ++i) {
         boids[i] = {
             x: Math.random()*SCREEN_SIZE, // x座標
