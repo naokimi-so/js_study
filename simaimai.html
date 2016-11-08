@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript サンプル</TITLE>
+<SCRIPT type="text/JavaScript">
+<!--
+function mouseMove(){
+document.onmousemove=imgMouseMove;
+}
+function imgMouseMove(evt){
+if(document.all){
+document.all.img4.style.top = 15 + document.body.scrollTop + window.event.clientY;
+document.all.img4.style.left = 15 + document.body.scrollLeft + window.event.clientX;
+document.all.img4.style.visibility = "visible";
+}else if(document.getElementById){
+document.getElementById("img4").style.top = 15 + evt.pageY;
+document.getElementById("img4").style.left = 15 + evt.pageX;
+document.getElementById("img4").style.visibility = "visible";
+}
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY onLoad="mouseMove()">
+<IMG src="IMG_1234.GIF" border="0" id="img4" style="position:absolute; visibility:hidden">
+</BODY>
+</HTML>

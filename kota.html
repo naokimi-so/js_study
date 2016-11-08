@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript サンプル</TITLE>
+<SCRIPT type="text/JavaScript">
+<!--
+imgLeftStart = 250;
+imgLeftEnd = 350;
+imgLeft = imgLeftStart;
+imgTop = 300;
+moveStep = 5;
+moveSpeed = 100;
+function moveImgX(){
+document.getElementById("img1").style.top = imgTop;
+document.getElementById("img1").style.left = imgLeft;
+if(imgLeftEnd-imgLeftStart > 0){
+imgLeft += moveStep;
+if(imgLeft > imgLeftEnd){
+imgLeft = imgLeftStart;
+}
+}else{
+imgLeft -= moveStep;
+if(imgLeft < imgLeftEnd){
+imgLeft = imgLeftStart;
+}
+}
+document.getElementById("img1").style.visibility="visible";
+setTimeout("moveImgX()",moveSpeed);
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY onLoad="moveImgX()">
+<IMG src="IMG_1234.GIF" border="0" id="img1" style="position:absolute; visibility:hidden">
+</BODY>
+</HTML>
