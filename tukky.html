@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel=stylesheet href="css/tukky.css">
+    <title>tukky</title>
+  </head>
+  <body>
+    <h2>3つの島井を揃えろ</h2>
+    <p>3つの島井</p>
+    <script>
+    var shimai = ["島井", "shimai","終い"]
+    var rnd = Math.floor(Math.random()*3);
+        document.write("俺は「"+shimai[rnd]+"」<br>");
+
+    var rnd2 = Math.floor(Math.random()*3);
+        document.write("俺は「"+shimai[rnd2]+"」<br>");
+
+    var rnd3 = Math.floor(Math.random()*3);
+        document.write("俺は「"+shimai[rnd3]+"」<br>");
+
+        if(rnd == rnd2 && rnd == rnd3){
+            document.write("<h1>揃った　新世界の髪となる！！<h1>");
+        }else if(rnd == rnd2 || rnd == rnd3 || rnd2 == rnd3 ){
+            document.write("<h1>ペンパイナッポーあっぽーペン<h1>");
+        }else{
+            document.write("<h1>PPAP<h1>");
+        }
+    </script>
+
+
+  </body>
+</html>
